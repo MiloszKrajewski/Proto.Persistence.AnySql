@@ -1,0 +1,9 @@
+storage: none
+strategy: min
+framework: netstandard1.5
+
+source https://www.nuget.org/api/v2
+
+nuget Proto.Persistence
+nuget MySqlConnector
+nuget System.Data.Common
