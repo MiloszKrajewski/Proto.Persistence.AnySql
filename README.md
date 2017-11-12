@@ -1,11 +1,12 @@
 # Proto.Persistence.AnySql
 
 ![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.AnySql.svg)
-![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.MySql.svg)
 
 Persistence provider for [Proto.Actor](http://proto.actor/) (potentially) handling any SQL database
 
-# MySQL
+# Proto.Persistence.MySql
+
+![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.MySql.svg)
 
 Currently only MySQL dialect is included and, to be honest, it might be the only one, as all others are already implemented (PostgreSQL, Microsoft SQL Server, SQLite). The only one missing is Oracle but I wouldn't be even able to test it as I don't have any Oracle databases around me.
 
