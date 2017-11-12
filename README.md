@@ -2,7 +2,20 @@
 
 ![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.AnySql.svg)
 
-Persistence provider for [Proto.Actor](http://proto.actor/) (potentially) handling any SQL database
+Persistence provider for [Proto.Actor](http://proto.actor/) (potentially) handling any SQL database.
+
+AnySqlProvider has two holes to fill in: **connection factory** and **sql dialect**:
+
+```csharp
+IProvider provider = new AnySqlProvider(
+    () => new SomeDbConnecion(...),  // <-- here
+    "schema", "table",
+    obj => Serialize(obj),
+    str => Deserialize(str),
+    new SomeSqlDialect()); // <-- here
+```
+
+Both of them need to implemented for specific database.
 
 # Proto.Persistence.MySql
 
@@ -13,7 +26,7 @@ Currently only MySQL dialect is included and, to be honest, it might be the only
 # Usage
 
 ```csharp
-private static readonly IProvider MySqlProvider = new MySqlProvider(
+IProvider provider = new MySqlProvider(
     "Server=...;Database=...;Uid=...;Pwd=...;Allow User Variables=true",
     "schema", "table", obj => Serialize(obj), str => Deserialize(str));
 ```
