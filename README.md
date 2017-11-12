@@ -102,7 +102,7 @@ limit 1
 
 Please note `... order by index desc limit 1` in last query. This is possibly the only catch here.
 
-Check `MySqlDialect` for reference.
+See [`MySqlDialect`](src/Proto.Persistence.AnySql/MySqlDialect.cs) for reference.
 
 # Build
 
