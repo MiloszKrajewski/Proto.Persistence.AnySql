@@ -15,15 +15,15 @@ Currently only MySQL dialect is included and, to be honest, it might be the only
 ```csharp
 private static readonly IProvider MySqlProvider = new MySqlProvider(
     "Server=...;Database=...;Uid=...;Pwd=...;Allow User Variables=true",
-    "schema", "table", Serialize, Deserialize);
+    "schema", "table", obj => Serialize(obj), str => Deserialize(str));
 ```
 
 It is important to have `Allow User Variables=true` is connection string.
 
-It is also worth noting, that provider itself does not depend on any specific serializer as long as it serializes to string.
+It is also worth noting, that provider itself does not tie you up to any specific serializer as long as it serializes to string.
 If your serialized serializes to `byte[]`, well, `Convert.ToBase64String(...)` is your friend.
 
-Easiest to set up is `JsonSerializer`:
+Easiest to set up is `Netwtonsoft.Json`:
 
 ```csharp
 private static readonly JsonSerializerSettings JsonSettings = 
@@ -36,7 +36,7 @@ public static object Deserialize(string s) =>
     JsonConvert.DeserializeObject(s, JsonSettings);
 ```
 
-Please note `{ TypeNameHandling = TypeNameHandling.All }`. This is important to allow fully polymorphic serialization. If you know what you are doing it is possible to configure it to use `TypeNameHandling.Auto`, but it requires a little bit of knowledge how `Newtonsoft.Json` works.
+Please note `{ TypeNameHandling = TypeNameHandling.All }`. This is important to allow polymorphic serialization. If you know what you are doing it is possible to configure it to use `TypeNameHandling.Auto`, but it requires a little bit of knowledge how `Newtonsoft.Json` works.
 
 Why `string` not `byte[]`?
 I guess this project is still in *debug* mode and JSON will me most frequently used serialization mechanism, so storing it as `string` will make it human readable and easier to handle with third-party tools. 
@@ -88,6 +88,8 @@ limit 1
 ```
 
 Please note `... order by index desc limit 1` in last query. This is possibly the only catch here.
+
+Check `MySqlDialect` for reference.
 
 # Build
 
