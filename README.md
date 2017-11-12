@@ -1,5 +1,7 @@
 # Proto.Persistence.AnySql
 
+![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.AnySql.svg)](https://www.nuget.org/packages/Proto.Persistence.AnySql)![NuGet Stats](https://img.shields.io/nuget/v/Proto.Persistence.MySql.svg)](https://www.nuget.org/packages/Proto.Persistence.MySql)
+
 Persistence provider for [Proto.Actor](http://proto.actor/) (potentially) handling any SQL database
 
 # MySQL
@@ -84,3 +86,9 @@ limit 1
 ```
 
 Please note `... order by index desc limit 1` in last query. This is possibly the only catch here.
+
+# Build
+
+```shell
+fake build
+```
