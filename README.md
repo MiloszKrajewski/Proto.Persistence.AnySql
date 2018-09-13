@@ -49,7 +49,7 @@ public static object Deserialize(string s) =>
     JsonConvert.DeserializeObject(s, JsonSettings);
 ```
 
-Please note `{ TypeNameHandling = TypeNameHandling.All }`. This is important to allow polymorphic serialization. If you know what you are doing it is possible to configure it to use `TypeNameHandling.Auto`, but it requires a little bit of knowledge how `Newtonsoft.Json` works. If you need more control take a look at [Pocket.Json.KnownTypes](https://github.com/MiloszKrajewski/Pocket.Json.KnownTypes).
+Please note `{ TypeNameHandling = TypeNameHandling.All }`. This is important to allow polymorphic serialization. If you know what you are doing it is possible to configure it to use `TypeNameHandling.Auto`, but it requires a little bit of knowledge how `Newtonsoft.Json` works. If you need more control take a look at [K4os.Json.KnownTypes](https://github.com/MiloszKrajewski/K4os.Json.KnownTypes).
 
 Why `string` not `byte[]`?
 I guess this project is still in *debug* mode and JSON will me most frequently used serialization mechanism, so storing it as `string` will make it human readable and easier to handle with third-party tools. 
