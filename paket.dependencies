@@ -1,9 +1,11 @@
-storage: none
-strategy: min
-framework: netstandard1.5
-
+storage none
+framework auto-detect
 source https://www.nuget.org/api/v2
 
 nuget Proto.Persistence
 nuget MySqlConnector
 nuget System.Data.Common
+
+nuget Microsoft.NET.Test.Sdk
+nuget xunit
+nuget xunit.runner.visualstudio

@@ -7,7 +7,9 @@
 	public class MySqlDialect: IAnySqlDialect
 	{
 		private static string Combine(string schemaName, string tableName) =>
-			string.IsNullOrWhiteSpace(schemaName) ? $"`{tableName}`" : $"`{schemaName}`.`{tableName}`";
+			string.IsNullOrWhiteSpace(schemaName)
+				? $"`{tableName}`"
+				: $"`{schemaName}`.`{tableName}`";
 
 		public string EventsTable(string schemaName, string tableName) =>
 			Combine(schemaName, tableName + "_events");

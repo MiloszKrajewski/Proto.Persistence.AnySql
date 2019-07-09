@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <Version>0.1.14.1</Version>
+    <AssemblyVersion>0.1.14.1</AssemblyVersion>
+    <FileVersion>0.1.14.1</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Milosz Krajewski</Authors>
+    <Copyright>Milosz Krajewski</Copyright>
+    <Product>Proto.Persistence.AnySql</Product>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/MiloszKrajewski/Proto.Persistence.AnySql/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/MiloszKrajewski/Proto.Persistence.AnySql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MiloszKrajewski/Proto.Persistence.AnySql</RepositoryUrl>
+    <PackageIconUrl>http://proto.actor/images/logo.png</PackageIconUrl>
+  </PropertyGroup>
+</Project>

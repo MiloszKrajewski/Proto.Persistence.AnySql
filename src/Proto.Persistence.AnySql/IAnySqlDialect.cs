@@ -2,11 +2,11 @@
 {
 	/// <summary>
 	/// SQL dialect. Requires specific implementation per database vendor.
-	/// Unfortunatelly, SQL has lot of flavours so every database is slightly different.
+	/// Unfortunately, SQL has lot of flavours so every database is slightly different.
 	/// Please note, that SQL statements provided by this dialect object are 
 	/// tightly coupled with AnySqlProvider, and require field and parameter names to be
 	/// very specific. Please take a look at the reference implementation in
-	/// <see cref="MySqlDialect"/>. It's ilmost impossible to get it right without it.
+	/// <see cref="MySqlDialect"/>. It's almost impossible to get it right without it.
 	/// </summary>
 	public interface IAnySqlDialect
 	{

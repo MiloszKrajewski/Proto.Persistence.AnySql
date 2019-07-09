@@ -1,22 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <RootNamespace>Proto.Persistence.AnySql</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <Version>0.1.14.1</Version>
-    <AssemblyVersion>0.1.14.1</AssemblyVersion>
-    <FileVersion>0.1.14.1</FileVersion>
-    <Authors>Milosz Krajewski</Authors>
     <PackageId>Proto.Persistence.AnySql</PackageId>
-    <Product>Proto.Persistence.AnySql</Product>
     <Description>Proto.Persistence driver for any SQL database</Description>
     <PackageTags>actors actor model concurrency proto protoactor persistence sql</PackageTags>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/MiloszKrajewski/Proto.Persistence.AnySql/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/MiloszKrajewski/Proto.Persistence.AnySql</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/MiloszKrajewski/Proto.Persistence.AnySql</RepositoryUrl>
-    <PackageIconUrl>http://proto.actor/images/logo.png</PackageIconUrl>
   </PropertyGroup>
+  <Import Project="..\..\Common.targets" />
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

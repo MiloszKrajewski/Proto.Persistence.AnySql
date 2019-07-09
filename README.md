@@ -107,5 +107,6 @@ See [`MySqlDialect`](src/Proto.Persistence.AnySql/MySqlDialect.cs) for reference
 # Build
 
 ```shell
+paket install
 fake build
 ```

@@ -7,6 +7,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proto.Persistence.AnySql", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proto.Persistence.MySql", "Proto.Persistence.MySql\Proto.Persistence.MySql.csproj", "{F6D97811-D56F-44C8-92BB-A9FE794D7D04}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{C6AE9568-906A-4FAA-9DE3-46F9AF02FA9E}"
+	ProjectSection(SolutionItems) = preProject
+		..\build.fsx = ..\build.fsx
+		..\build.tools.fsx = ..\build.tools.fsx
+		..\CHANGES.md = ..\CHANGES.md
+		..\paket.dependencies = ..\paket.dependencies
+		..\README.md = ..\README.md
+		..\Common.targets = ..\Common.targets
+		..\.secrets.cfg = ..\.secrets.cfg
+		..\settings.cfg = ..\settings.cfg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

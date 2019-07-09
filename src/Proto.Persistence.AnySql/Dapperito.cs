@@ -28,11 +28,11 @@ namespace Proto.Persistence.AnySql
 		public static DbCommand AddParameter(
 			this DbCommand command, string name, DbType type, object value)
 		{
-			var paramerer = command.CreateParameter();
-			paramerer.ParameterName = name;
-			paramerer.DbType = type;
-			paramerer.Value = value;
-			command.Parameters.Add(paramerer);
+			var parameter = command.CreateParameter();
+			parameter.ParameterName = name;
+			parameter.DbType = type;
+			parameter.Value = value;
+			command.Parameters.Add(parameter);
 			return command;
 		}
 

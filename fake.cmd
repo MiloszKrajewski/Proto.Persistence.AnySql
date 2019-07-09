@@ -1,15 +1,8 @@
 @echo off
-
 setlocal
-set fake=%~dp0\.fake\fake.exe
-
-if not exist %fake% (
-    pushd %~dp0
-    rmdir /q /s %temp%\nuget\fake 2> nul
-    nuget install -out %temp%\nuget -excludeversion fake
-    xcopy %temp%\nuget\fake\tools\* .\.fake\
-    popd
-)
-
-%fake% %*
+pushd %~dp0
+set fake=.fake\fake.exe
+if not exist %fake% (dotnet tool install fake-cli --tool-path %fake%\..)
+%fake% build -t %*
+popd
 endlocal

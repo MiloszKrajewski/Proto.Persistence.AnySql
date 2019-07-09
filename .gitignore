@@ -1,9 +1,16 @@
 .vs/
+.vscode/
 .fake/
 .paket/
 .output/
 .idea/
+.ionide/
 paket-files/
+packages/
 
 **/bin/
 **/obj/
+
+.secrets.cfg
+
+*.bak
