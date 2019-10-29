@@ -16,6 +16,7 @@ namespace Proto.Persistence.AnySql
 		private readonly Func<string, object> _deserialize;
 		private readonly IAnySqlDialect _dialect;
 
+		private readonly string _schemaName;
 		private readonly string _eventsTable;
 		private readonly string _snapshotsTable;
 		private readonly Task _ready;
@@ -39,6 +40,7 @@ namespace Proto.Persistence.AnySql
 			_deserialize = deserialize;
 			_dialect = dialect;
 
+			_schemaName = schema;
 			_eventsTable = Dialect.EventsTable(schema, table);
 			_snapshotsTable = Dialect.SnapshotsTable(schema, table);
 			_ready = CreateTables();
@@ -72,6 +74,13 @@ namespace Proto.Persistence.AnySql
 		{
 			using (var connection = await Connect(Task.CompletedTask))
 			{
+				if (!string.IsNullOrWhiteSpace(_schemaName))
+				{
+					await connection
+						.CreateCommand(Dialect.CreateSchema(_schemaName))
+						.ExecuteNonQueryAsync();
+				}
+
 				await connection
 					.CreateCommand(Dialect.CreateEventsTable(_eventsTable))
 					.ExecuteNonQueryAsync();

@@ -21,6 +21,11 @@
 		/// <param name="tableName">Name of the table.</param>
 		/// <returns>Name of snapshots table.</returns>
 		string SnapshotsTable(string schemaName, string tableName);
+		
+		/// <summary>SQL to create the schema.</summary>
+		/// <param name="schemaName">Name of the schema.</param>
+		/// <returns>SQL which will create schema.</returns>
+		string CreateSchema(string schemaName);
 
 		/// <summary>SQL to create the events table.</summary>
 		/// <param name="objectName">Name of the object.</param>

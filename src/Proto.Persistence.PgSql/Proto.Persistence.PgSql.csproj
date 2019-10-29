@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <RootNamespace>Proto.Persistence.MySql</RootNamespace>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Proto.Persistence.MySql</PackageId>
-    <Description>Proto.Persistence driver for MySQL database</Description>
-    <PackageTags>actors actor model concurrency proto protoactor persistence sql mysql</PackageTags>
+    <PackageId>Proto.Persistence.PgSql</PackageId>
+    <Description>Proto.Persistence driver for PosgreSQL database</Description>
+    <PackageTags>actors actor model concurrency proto protoactor persistence sql postgres</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Proto.Persistence.AnySql\Proto.Persistence.AnySql.csproj" />
